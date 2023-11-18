@@ -1,6 +1,6 @@
 {
   "name": "bun-npm-package",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "",
   "keywords": [],
   "author": "rai",
@@ -14,16 +14,22 @@
     "url": "https://github.com/r4ai/<REPOSITORY_NAME>/issues"
   },
   "homepage": "https://github.com/r4ai/<REPOSITORY_NAME>",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "src",
-    "dist"
+    "dist",
+    "!**/*.test.ts",
+    "!**/*.tsbuildinfo",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "test": "vitest",
-    "build": "rm -rf dist && tsc",
+    "build": "rimraf dist && concurrently 'bun run build:cjs' 'bun run build:esm'",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "prepublishOnly": "bun run build",
     "check": "bunx @biomejs/biome check --apply .",
     "prepare": "husky install"
@@ -35,8 +41,10 @@
     "@qnighy/dedent": "^0.1.1",
     "bun-plugin-dts": "^0.2.1",
     "bun-types": "^1.0.7",
+    "concurrently": "^8.2.2",
     "husky": "^8.0.0",
     "lint-staged": "^15.0.2",
+    "rimraf": "^5.0.5",
     "typescript": "^5.0.0",
     "vitest": "^0.34.6"
   }
