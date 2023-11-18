@@ -13,6 +13,9 @@
     "build": "rm -rf dist && bun run ./build.ts",
     "prepare": "husky install"
   },
+  "workspaces": [
+    "templates/*"
+  ],
   "devDependencies": {
     "@biomejs/biome": "1.3.3",
     "bun-types": "latest",
