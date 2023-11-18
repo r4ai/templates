@@ -1,15 +1,14 @@
 # templates
 
-To install dependencies:
+個人用のテンプレート集
 
-```bash
-bun install
+## Usage
+
+`git clone` して、必要なディレクトリだけ残して使う方法：
+
+```sh
+git clone --depth 1 https://github.com/r4ai/templates.git
+mv templates/templates/<template-name> <your-project-name>
+rm -rf templates
+cd <your-project-name>
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
