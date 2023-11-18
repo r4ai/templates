@@ -1,6 +1,6 @@
 # bun-npm-package
 
-An typescript npm package template.
+A bun + typescript npm package template.
 
 ## Installation
 
