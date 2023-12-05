@@ -24,7 +24,7 @@
     "lint-staged": "^15.1.0",
     "turbo": "^1.10.16",
     "typescript": "^5.0.0",
-    "vitest": "^0.34.6"
+    "vitest": "^1.0.0"
   },
   "dependencies": {
     "@inquirer/prompts": "^3.3.0"
