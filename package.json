@@ -27,6 +27,6 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
-    "@inquirer/prompts": "^3.3.0"
+    "@inquirer/prompts": "^4.0.0"
   }
 }
