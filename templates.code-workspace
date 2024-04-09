@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "create-project",
+      "path": "packages/create-project"
+    },
+    {
+      "name": "templates/bun-npm-package",
+      "path": "templates/bun-npm-package"
+    }
+  ],
+  "settings": {
+    "[typescriptreact][typescript][javascriptreact][javascript][json][jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    }
+  }
+}

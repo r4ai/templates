@@ -32,7 +32,7 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "prepublishOnly": "bun run build",
     "check": "bunx @biomejs/biome check --apply .",
-    "prepack": "lefthook install"
+    "prepare": "lefthook install"
   },
   "peerDependencies": {},
   "dependencies": {},

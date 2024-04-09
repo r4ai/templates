@@ -11,11 +11,9 @@
     "test": "vitest",
     "check": "bunx @biomejs/biome check --apply .",
     "build": "rm -rf dist && bun run ./build.ts",
-    "prepack": "lefthook install"
+    "prepare": "lefthook install"
   },
-  "workspaces": [
-    "templates/*"
-  ],
+  "workspaces": ["templates/*"],
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
     "@types/bun": "^1.0.12",

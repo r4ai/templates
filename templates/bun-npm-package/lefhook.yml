@@ -4,7 +4,7 @@ pre-commit:
   parallel: true
   commands:
     biome:
-      glob: "*.{js,cjs,mjs,ts,jsx,tsx}"
+      glob: "*.{js,cjs,mjs,ts,jsx,tsx,json,jsonc}"
       run: |
-        bunx @biomejs/biome check --apply
+        bunx @biomejs/biome check --apply {staged_files}
         git add {staged_files}
