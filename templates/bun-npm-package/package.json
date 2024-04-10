@@ -15,9 +15,9 @@
     "url": "https://github.com/r4ai/<REPOSITORY_NAME>/issues"
   },
   "homepage": "https://github.com/r4ai/<REPOSITORY_NAME>",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "files": [
     "src",
     "dist",
