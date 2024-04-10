@@ -10,7 +10,7 @@ const log = console.log;
 const templateName = await select({
   message: "Select a template",
   choices: templates(),
-});
+}).catch(() => process.exit(1));
 
 // Confirm the directory to download the template to
 const templateDir =
