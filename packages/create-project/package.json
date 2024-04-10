@@ -13,9 +13,6 @@
     "url": "https://github.com/r4ai/templates/issues"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "src",
     "dist",
@@ -26,7 +23,7 @@
     "LICENSE"
   ],
   "bin": {
-    "create-project": "dist/index.js"
+    "create-project": "./dist/create-project.js"
   },
   "publishConfig": {
     "access": "public"
