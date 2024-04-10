@@ -1,6 +1,7 @@
 {
   "name": "templates",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "private": "true",
   "author": "rai <https://github.com/r4ai>",
   "license": "MIT",
   "repository": {
