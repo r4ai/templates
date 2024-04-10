@@ -1,5 +1,6 @@
 {
   "name": "npm-project",
+  "private": true,
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
