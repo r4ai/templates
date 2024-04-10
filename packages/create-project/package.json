@@ -1,6 +1,6 @@
 {
   "name": "@r4ai/create-project",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A CLI to create a new project with some templates",
   "author": "rai",
   "keywords": ["cli", "create", "project", "template"],
