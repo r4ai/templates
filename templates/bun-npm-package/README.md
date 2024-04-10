@@ -2,6 +2,17 @@
 
 A bun + typescript npm package template.
 
+## Tech Stack
+
+- Runtime: Bun, Node.js
+- Language: TypeScript
+- Testing: Vitest
+- Formatting and Linting: Biome
+- Versioning: Changesets
+- Git Hooks: Lefthook
+- CI/CD: GitHub Actions
+- Dependency Updates: Renovate
+
 ## Development
 
 ### Commands
