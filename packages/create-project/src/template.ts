@@ -11,17 +11,18 @@ type Package = {
   description?: string;
 };
 
-export const templates = () => {
-  const templatesDir = path.join(
+export const templates = (
+  templatesDirPath = path.join(
     import.meta.dirname,
     "..",
     "..",
     "..",
     "templates",
-  );
-  const templateDirs = getDirectories(templatesDir);
+  ),
+) => {
+  const templateDirs = getDirectories(templatesDirPath);
   return templateDirs.map((dir) => {
-    const packageJsonPath = path.join(templatesDir, dir, "package.json");
+    const packageJsonPath = path.join(templatesDirPath, dir, "package.json");
     const packageJson: Package = JSON.parse(
       fs.readFileSync(packageJsonPath, "utf-8"),
     );
