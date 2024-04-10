@@ -8,3 +8,7 @@ pre-commit:
       run: |
         bunx @biomejs/biome check --apply {staged_files}
         git add {staged_files}
+
+    check-lockfile:
+      glob: "**/package.json"
+      run: bun install --frozen-lockfile
