@@ -1,11 +1,11 @@
 # @r4ai/create-project
 
-## Quick start
+## Quick Start
 
 Run the following command to create a new project:
 
 ```
-bunx @r4ai/create-project
+bun create @r4ai/project
 ```
 
 Answer the questions and you're ready to go!
