@@ -9,7 +9,7 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  ci:
+  deploy-npm-packages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
