@@ -18,7 +18,7 @@
     "prepare": "lefthook install",
     "prepublishOnly": "bun run build"
   },
-  "workspaces": ["templates/*", "packages/*"],
+  "workspaces": ["packages/*"],
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
     "@changesets/changelog-github": "^0.5.0",

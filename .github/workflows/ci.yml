@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  ci:
+  packages-ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,4 +24,25 @@ jobs:
         run: bun run build
 
       - name: Test
+        run: bun run test:ci
+
+  bun-npm-package-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun and Node.js
+        uses: jdx/mise-action@v2
+
+      - name: Install dependencies
+        working-directory: templates/bun-npm-package
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        working-directory: templates/bun-npm-package
+        run: bun run build
+
+      - name: Test
+        working-directory: templates/bun-npm-package
         run: bun run test:ci
