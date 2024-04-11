@@ -6,7 +6,7 @@ const getDirectories = (pathToDir: string) =>
     .readdirSync(pathToDir)
     .filter((file) => fs.statSync(path.join(pathToDir, file)).isDirectory());
 
-type Package = {
+type TemplateConfig = {
   name: string;
   description?: string;
 };
@@ -22,14 +22,18 @@ export const templates = (
 ) => {
   const templateDirs = getDirectories(templatesDirPath);
   return templateDirs.map((dir) => {
-    const packageJsonPath = path.join(templatesDirPath, dir, "package.json");
-    const packageJson: Package = JSON.parse(
-      fs.readFileSync(packageJsonPath, "utf-8"),
+    const templateConfigPath = path.join(
+      templatesDirPath,
+      dir,
+      "template.config.json",
+    );
+    const templateConfig: TemplateConfig = JSON.parse(
+      fs.readFileSync(templateConfigPath, "utf-8"),
     );
     return {
-      name: packageJson.name,
-      value: packageJson.name,
-      description: packageJson.description,
+      name: templateConfig.name,
+      value: templateConfig.name,
+      description: templateConfig.description,
     };
   });
 };
