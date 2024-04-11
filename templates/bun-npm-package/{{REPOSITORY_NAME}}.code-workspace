@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "name": "{{REPOSITORY_NAME}}",
+      "path": "packages/{{REPOSITORY_NAME}}"
+    }
+  ],
+  "settings": {
+    "[typescriptreact][typescript][javascriptreact][javascript][json][jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    }
+  }
+}
