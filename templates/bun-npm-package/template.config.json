@@ -1,0 +1,5 @@
+{
+  "$schema": "https://raw.githubusercontent.com/r4ai/templates/main/packages/create-project/schema/template.json",
+  "name": "bun-npm-package",
+  "description": "A simple mono-repo npm package with Bun, TypeScript, Biome, Vitest and Lefthook"
+}

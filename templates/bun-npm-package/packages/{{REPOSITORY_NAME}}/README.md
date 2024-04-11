@@ -1,4 +1,4 @@
-# bun-npm-package
+# {{REPOSITORY_NAME}}
 
 A bun + typescript npm package template.
 
