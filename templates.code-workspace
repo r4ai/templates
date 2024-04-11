@@ -11,6 +11,10 @@
     {
       "name": "templates/bun-npm-package",
       "path": "templates/bun-npm-package"
+    },
+    {
+      "name": "templates/slidev",
+      "path": "templates/slidev"
     }
   ],
   "settings": {
