@@ -1,5 +1,11 @@
 # @r4ai/create-project
 
+## 0.2.0
+
+### Minor Changes
+
+- [`2991c62`](https://github.com/r4ai/templates/commit/2991c62829343ef13215d04e6ac4740ff8c204d3) Thanks [@r4ai](https://github.com/r4ai)! - feat: added ability to embed strings with {{VARIABLE_NAME}}
+
 ## 0.1.1
 
 ### Patch Changes
