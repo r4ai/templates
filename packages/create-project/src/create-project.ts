@@ -1,8 +1,10 @@
 import fs from "node:fs";
+import path from "node:path";
 import { input, select } from "@inquirer/prompts";
 import chalk from "chalk";
 import { downloadTemplate } from "giget";
 import { templates } from "./template" with { type: "macro" };
+import { type Variables, transpile } from "./transpiler";
 
 const log = console.log;
 
@@ -29,6 +31,17 @@ const templateDir =
     },
   }).catch(() => process.exit(1)));
 
+const username = await input({
+  message: "Enter your GitHub username",
+  default: "r4ai",
+  validate: (input) => {
+    if (!input) {
+      return "Username cannot be empty";
+    }
+    return true;
+  },
+}).catch(() => process.exit(1));
+
 // Download the template
 const { dir } = await downloadTemplate(
   `github:r4ai/templates/templates/${templateName}`,
@@ -39,3 +52,10 @@ const { dir } = await downloadTemplate(
 log(
   `\n Template ${chalk.greenBright("downloaded")} to ${chalk.underline(dir)}`,
 );
+
+// Transpile the template
+const kv: Variables = {
+  GITHUB_USER_NAME: username,
+  REPOSITORY_NAME: path.basename(dir),
+};
+await transpile(dir, kv);
