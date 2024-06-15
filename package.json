@@ -25,7 +25,8 @@
     "@changesets/cli": "^2.27.1",
     "@types/bun": "^1.0.12",
     "lefthook": "^1.6.10",
-    "turbo": "^1.10.16",
+    "turbo": "^2.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "packageManager": "bun@1.1.12"
 }
