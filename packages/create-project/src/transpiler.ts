@@ -47,4 +47,12 @@ const transpileDir = async (dir: string, variables: Variables) => {
   await Promise.all(transpiling);
 };
 
-export const transpile = transpileDir;
+const removeTemplateConfig = async (dir: string) => {
+  const templateConfigPath = path.join(dir, "template.config.json");
+  await fs.rm(templateConfigPath);
+};
+
+export const transpile = async (dir: string, variables: Variables) => {
+  await removeTemplateConfig(dir);
+  await transpileDir(dir, variables);
+};
