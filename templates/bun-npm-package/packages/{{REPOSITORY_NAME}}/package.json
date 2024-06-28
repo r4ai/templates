@@ -17,15 +17,10 @@
   "homepage": "https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}",
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "types": "./dist/esm/index.d.ts",
-      "default": "./dist/esm/index.js"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
   "files": [
     "src",
     "dist",
@@ -34,13 +29,17 @@
     "README.md",
     "LICENSE"
   ],
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "check": "bunx @biomejs/biome check --apply .",
-    "build": "rimraf dist && concurrently 'bun run build:cjs' 'bun run build:esm'",
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
     "test": "vitest",
     "test:ci": "vitest run",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:esm": "tsc -p tsconfig.esm.json",
     "release": "bun run build && bun run test:ci && bun run changeset publish",
     "prepublishOnly": "bun run build"
   },
@@ -52,7 +51,6 @@
     "@changesets/cli": "^2.27.1",
     "@types/bun": "^1.0.12",
     "bun-plugin-dts": "^0.2.1",
-    "concurrently": "^8.2.2",
     "rimraf": "^5.0.5",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
