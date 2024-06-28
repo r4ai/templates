@@ -11,7 +11,7 @@ pre-commit:
       run: bunx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
 
     bun-npm-package/biome:
-      root: templates/bun-npm-package/packages/{{REPOSITORY_NAME}}
+      root: templates/bun-npm-package
       tags: biome
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       stage_fixed: true
