@@ -1,39 +1,34 @@
 {
-  "name": "root",
-  "version": "0.0.0",
-  "private": true,
-  "author": "{{GITHUB_USER_NAME}}",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}.git"
-  },
-  "bugs": {
-    "url": "https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}/issues"
-  },
-  "type": "module",
-  "workspaces": ["packages/*"],
-  "scripts": {
-    "check": "bunx @biomejs/biome check --write .",
-    "build": "turbo build",
-    "test": "turbo test",
-    "test:ci": "turbo test:ci",
-    "changeset": "changeset",
-    "release": "bun run build && bun run test:ci && bun run changeset publish",
-    "prepare": "lefthook install",
-    "prepublishOnly": "bun run build"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.1",
-    "@tsconfig/node16": "^16.1.3",
-    "@types/bun": "^1.0.8",
-    "@types/lint-staged": "^13.3.0",
-    "lefthook": "^1.6.9",
-    "rimraf": "^5.0.5",
-    "turbo": "^2.0.0",
-    "typescript": "^5.0.0"
-  },
-  "packageManager": "bun@1.1.12"
+	"name": "root",
+	"version": "0.0.0",
+	"private": true,
+	"author": "{{GITHUB_USER_NAME}}",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}.git"
+	},
+	"bugs": {
+		"url": "https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}/issues"
+	},
+	"type": "module",
+	"workspaces": ["packages/*"],
+	"scripts": {
+		"check": "turbo check",
+		"check:write": "turbo check:write",
+		"build": "turbo build",
+		"test": "turbo test",
+		"test:ci": "turbo test:ci",
+		"changeset": "changeset",
+		"release": "bun run build && bun run test:ci && bun run changeset publish",
+		"prepare": "lefthook install",
+		"prepublishOnly": "bun run build"
+	},
+	"devDependencies": {
+		"@changesets/changelog-github": "^0.5.0",
+		"@changesets/cli": "^2.27.1",
+		"lefthook": "^1.6.9",
+		"turbo": "^2.0.0"
+	},
+	"packageManager": "bun@1.1.12"
 }
