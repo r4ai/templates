@@ -30,10 +30,11 @@
   },
   "scripts": {
     "test": "vitest",
-    "test:ci": "vitest run",
     "build": "bun run ./build.ts",
     "prepublishOnly": "bun run build",
-    "check": "bunx @biomejs/biome check --apply .",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "check:ci": "biome ci .",
     "release": "bun run vitest run && bun run build && bun run changeset publish"
   },
   "peerDependencies": {},

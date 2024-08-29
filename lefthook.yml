@@ -3,8 +3,7 @@
 pre-commit:
   parallel: true
   commands:
-    create-project/biome:
-      root: packages/create-project
+    root/biome:
       tags: biome
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       stage_fixed: true
