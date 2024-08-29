@@ -5,7 +5,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "check:ci": "",
+    "check:ci": "echo 'not implemented yet'",
     "export": "slidev export"
   },
   "dependencies": {
