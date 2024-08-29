@@ -19,7 +19,6 @@
     "check:ci": "biome ci .",
     "build": "turbo build",
     "test": "turbo test",
-    "test:ci": "turbo test:ci",
     "changeset": "changeset",
     "release": "bun run build && bun run test:ci && bun run changeset publish",
     "prepare": "lefthook install",

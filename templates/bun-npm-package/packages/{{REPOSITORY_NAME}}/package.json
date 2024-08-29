@@ -25,6 +25,7 @@
     "src",
     "dist",
     "!**/*.test.ts",
+    "!**/*.spec.ts",
     "!**/*.tsbuildinfo",
     "README.md",
     "LICENSE"
@@ -41,7 +42,6 @@
     "check:ci": "biome ci .",
     "build": "rimraf dist && tsc --project tsconfig.build.json",
     "test": "vitest",
-    "test:ci": "vitest run",
     "release": "bun run build && bun run test:ci && bun run changeset publish",
     "prepublishOnly": "bun run build"
   },
