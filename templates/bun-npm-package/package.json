@@ -12,12 +12,11 @@
     "url": "https://github.com/{{GITHUB_USER_NAME}}/{{REPOSITORY_NAME}}/issues"
   },
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
-    "check": "turbo check",
-    "check:write": "turbo check:write",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "check:ci": "biome ci .",
     "build": "turbo build",
     "test": "turbo test",
     "test:ci": "turbo test:ci",
