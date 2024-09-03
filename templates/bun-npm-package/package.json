@@ -21,7 +21,6 @@
     "test": "turbo test",
     "changeset": "changeset",
     "release": "bun run build && bun run test:ci && bun run changeset publish",
-    "prepare": "lefthook install",
     "prepublishOnly": "bun run build"
   },
   "devDependencies": {
