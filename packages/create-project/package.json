@@ -51,7 +51,7 @@
     "@vitest/ui": "1.6.0",
     "bun-banner-plugin": "0.1.2",
     "dedent": "1.5.3",
-    "rimraf": "5.0.10",
+    "rimraf": "6.0.1",
     "typescript": "5.5.4",
     "vitest": "1.6.0"
   },
