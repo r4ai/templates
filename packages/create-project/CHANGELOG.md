@@ -1,5 +1,11 @@
 # @r4ai/create-project
 
+## 0.2.1
+
+### Patch Changes
+
+- [#8](https://github.com/r4ai/templates/pull/8) [`e0d47b8`](https://github.com/r4ai/templates/commit/e0d47b876cc5706741cde9097451a9cbe8d94156) Thanks [@renovate](https://github.com/apps/renovate)! - Update dependency @inquirer/prompts to v5
+
 ## 0.2.0
 
 ### Minor Changes
