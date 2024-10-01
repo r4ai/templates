@@ -1,9 +1,14 @@
 {
   "name": "@r4ai/create-project",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A CLI to create a new project with some templates",
   "author": "rai",
-  "keywords": ["cli", "create", "project", "template"],
+  "keywords": [
+    "cli",
+    "create",
+    "project",
+    "template"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
