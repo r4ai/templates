@@ -52,7 +52,7 @@
     "bun-banner-plugin": "0.1.2",
     "dedent": "1.5.3",
     "rimraf": "5.0.10",
-    "typescript": "5.5.4",
+    "typescript": "5.6.3",
     "vitest": "1.6.0"
   },
   "homepage": "https://github.com/r4ai/templates#readme",
