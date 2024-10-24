@@ -46,7 +46,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
     "@changesets/cli": "2.27.7",
-    "@types/bun": "1.1.8",
+    "@types/bun": "1.1.12",
     "@vitest/coverage-v8": "1.6.0",
     "@vitest/ui": "1.6.0",
     "bun-banner-plugin": "0.1.2",
