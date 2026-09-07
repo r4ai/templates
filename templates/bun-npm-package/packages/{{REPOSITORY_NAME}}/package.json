@@ -55,7 +55,7 @@
     "@types/bun": "1.1.8",
     "bun-plugin-dts": "0.2.3",
     "rimraf": "6.0.1",
-    "typescript": "5.5.4",
+    "typescript": "5.9.3",
     "vitest": "1.6.0"
   },
   "packageManager": "bun@1.1.12"
